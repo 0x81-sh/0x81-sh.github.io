@@ -1,4 +1,3 @@
-import Tree from "react-animated-tree";
 import DataContext from "../../contexts/Data.context";
 import Universal from "./Universal";
 

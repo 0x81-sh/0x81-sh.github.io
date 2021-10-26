@@ -1,8 +1,17 @@
 import Tree from "react-animated-tree";
 import Universal from "./Universal";
 
+const treeStyles = {
+    padding : "3.5%",
+    color: 'white',
+    fill: 'white'
+}
+
 const NodeVisual = ({data, name}) => {
-    return <Tree content={name}>
+    let style = undefined;
+    if (name === "Repositories") style = treeStyles;
+
+    return <Tree content={name} style={style}>
         {(() => {
             let arr = [];
             for (let key in data.children) {

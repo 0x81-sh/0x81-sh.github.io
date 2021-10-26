@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import {Container, CustomProvider} from "rsuite";
+import {Container, CustomProvider, Loader} from "rsuite";
 import Suspend from "./components/Suspend";
 import Centered from "./components/Centered";
-import SpinnerIcon from '@rsuite/icons/legacy/Spinner';
 import methods from "./functions/getData";
 
 import 'rsuite/dist/rsuite.min.css';
+import "./styles/index.css";
 
 ReactDOM.render(
     <React.StrictMode>
@@ -15,11 +15,7 @@ ReactDOM.render(
             <Suspend Component={App} fn={methods.getUserData}>
                 <Container style={{height: "100%"}}>
                     <Centered>
-                        <SpinnerIcon fontSize="2.7em" style={{margin: "auto", display: "block"}} pulse/>
-                        <br/>
-                        <h4>
-                            Loading data ...
-                        </h4>
+                        <Loader content="Loading data ..." vertical />
                     </Centered>
                 </Container>
             </Suspend>
@@ -27,3 +23,11 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 );
+
+/*
+                        <SpinnerIcon fontSize="2.7em" style={{margin: "auto", display: "block"}} pulse/>
+                        <br/>
+                        <h4>
+                            Loading data ...
+                        </h4>
+ */

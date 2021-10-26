@@ -6,7 +6,8 @@ const properties = [
     "language",
     "name",
     "description",
-    "html_url"
+    "html_url",
+    "full_name"
 ]
 
 class Repo {

@@ -1,3 +1,18 @@
 .centered {
     margin: auto;
 }
+
+.panelStyle {
+    width: auto;
+    margin: 0.5% 0.5% 0.7%;
+}
+
+.flexDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.buttonSpace {
+    margin-left: 10px;
+}
