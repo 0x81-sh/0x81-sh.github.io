@@ -1,6 +1,12 @@
+import DataContext from "../contexts/Data.context";
+
 const Home = () => {
     return <div>
-        Home
+        <DataContext.Consumer>
+            {(data) => {
+                console.log(data);
+            }}
+        </DataContext.Consumer>
     </div>
 }
 
