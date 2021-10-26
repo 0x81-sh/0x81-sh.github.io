@@ -1,12 +1,13 @@
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import NotFound from "./NotFound";
 import Home from "./Home";
-import Root from "./Root";
+import Root from "./tree/Root";
 import DataContext from "../contexts/Data.context";
 import Repo from "../classes/repo";
+import createTree from "../functions/createTree";
 
 const App = ({data}) => {
-    return <DataContext.Provider value={data.data.map(repo => new Repo(repo))}>
+    return <DataContext.Provider value={createTree(data.data.map(repo => new Repo(repo)))}>
         <BrowserRouter>
             <Switch>
                 <Route path="/root">

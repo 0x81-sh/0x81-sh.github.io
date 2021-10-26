@@ -5,9 +5,9 @@ import {Container, CustomProvider} from "rsuite";
 import Suspend from "./components/Suspend";
 import Centered from "./components/Centered";
 import SpinnerIcon from '@rsuite/icons/legacy/Spinner';
+import methods from "./functions/getData";
 
 import 'rsuite/dist/rsuite.min.css';
-import methods from "./functions/getData";
 
 ReactDOM.render(
     <React.StrictMode>

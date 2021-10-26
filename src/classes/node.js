@@ -1,4 +1,6 @@
 class Node {
+    type = "NODE";
+
     constructor () {
         this.children = {};
     }

@@ -5,7 +5,7 @@ const Suspend = ({Component, children, fn = () => {}, init = undefined}) => {
 
     useEffect(() => {
         fn(setData);
-    }, []);
+    }, [fn]);
 
     if (data === init) {
         return children;

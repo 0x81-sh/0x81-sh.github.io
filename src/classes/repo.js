@@ -10,6 +10,8 @@ const properties = [
 ]
 
 class Repo {
+    type = "REPO";
+
     constructor (rawData) {
         for (let property of properties) {
             this[property] = rawData[property];
