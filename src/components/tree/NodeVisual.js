@@ -2,7 +2,8 @@ import Tree from "react-animated-tree";
 import Universal from "./Universal";
 
 const treeStyles = {
-    padding : "3.5%",
+    paddingLeft : "3.5%",
+    paddingBottom : "3.5%",
     color: 'white',
     fill: 'white'
 }

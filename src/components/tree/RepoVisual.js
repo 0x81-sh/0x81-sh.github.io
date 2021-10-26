@@ -13,7 +13,7 @@ const copyCloneURL = (data) => {
     return () => {
         navigator.clipboard.writeText(data.clone_url);
         toaster.push(
-            <Notification type="success" header="Copied URL to clipboard"/>,
+            <Notification header={<p style={{fontSize : "0.9em"}}>Copied URL to clipboard</p>}/>,
             {
                 placement: 'topEnd'
             }
