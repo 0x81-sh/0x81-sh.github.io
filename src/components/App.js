@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {HashRouter, Route, Switch} from "react-router-dom";
 import NotFound from "./NotFound";
 import Home from "./Home";
 import Root from "./tree/Root";
@@ -8,7 +8,7 @@ import createTree from "../functions/createTree";
 
 const App = ({data}) => {
     return <DataContext.Provider value={createTree(data.data.map(repo => new Repo(repo)))}>
-        <BrowserRouter>
+        <HashRouter>
             <Switch>
                 <Route path="/root">
                     <Root/>
@@ -20,7 +20,7 @@ const App = ({data}) => {
                     <NotFound/>
                 </Route>
             </Switch>
-        </BrowserRouter>
+        </HashRouter>
     </DataContext.Provider>
 }
 
