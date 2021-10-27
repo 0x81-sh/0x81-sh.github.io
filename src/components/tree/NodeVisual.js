@@ -4,6 +4,7 @@ import Universal from "./Universal";
 const treeStyles = {
     paddingLeft : "3.5%",
     paddingBottom : "3.5%",
+    paddingRight : "5%",
     color: 'white',
     fill: 'white'
 }
